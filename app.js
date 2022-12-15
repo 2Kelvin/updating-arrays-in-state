@@ -2,7 +2,7 @@ var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = [
 
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
-var initialPlayers = [{ id: 0, name: "Steph Curry" }, { id: 1, name: "Christiano Ronaldo" }, { id: 2, name: "Klay Thompson" }];
+var initialPlayers = [{ id: 0, name: "Steph Curry" }, { id: 1, name: "Christiano Ronaldo" }, { id: 2, name: "Eliud Kipchoge" }, { id: 3, name: "Klay Thompson" }];
 
 function PlayerList() {
   var _React$useState = React.useState(""),
@@ -49,15 +49,16 @@ function PlayerList() {
           player.name,
           " ",
           React.createElement(
-            "button",
+            "span",
             {
+              className: "material-symbols-outlined",
               onClick: function onClick() {
                 setPlayers(players.filter(function (p) {
                   return p.id !== player.id;
                 }));
               }
             },
-            "Delete"
+            "delete"
           )
         );
       })

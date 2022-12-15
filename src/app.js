@@ -1,7 +1,8 @@
 let initialPlayers = [
   { id: 0, name: "Steph Curry" },
   { id: 1, name: "Christiano Ronaldo" },
-  { id: 2, name: "Klay Thompson" },
+  { id: 2, name: "Eliud Kipchoge" },
+  { id: 3, name: "Klay Thompson" },
 ];
 
 function PlayerList() {
@@ -28,13 +29,14 @@ function PlayerList() {
         {players.map((player) => (
           <li key={player.id}>
             {player.name}{" "}
-            <button
+            <span
+              className="material-symbols-outlined"
               onClick={() => {
                 setPlayers(players.filter((p) => p.id !== player.id));
               }}
             >
-              Delete
-            </button>
+              delete
+            </span>
           </li>
         ))}
       </ul>
