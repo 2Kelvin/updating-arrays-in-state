@@ -2,6 +2,8 @@ var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = [
 
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
+var nextPlayerId = 4;
+
 var initialPlayers = [{ id: 0, name: "Steph Curry" }, { id: 1, name: "Christiano Ronaldo" }, { id: 2, name: "Eliud Kipchoge" }, { id: 3, name: "Klay Thompson" }];
 
 function PlayerList() {
@@ -18,10 +20,11 @@ function PlayerList() {
   function handleAddPlayerClick() {
     var insertPlayerAt = 2;
     var nextPlayers = [].concat(_toConsumableArray(players.slice(0, insertPlayerAt)), [{
-      id: players[insertPlayerAt].id + players[players.length - 1].id,
+      id: nextPlayerId++,
       name: name
     }], _toConsumableArray(players.slice(insertPlayerAt)));
     setPlayers(nextPlayers);
+    console.log(nextPlayers);
     setName("");
   }
 

@@ -1,3 +1,5 @@
+let nextPlayerId = 4;
+
 let initialPlayers = [
   { id: 0, name: "Steph Curry" },
   { id: 1, name: "Christiano Ronaldo" },
@@ -14,12 +16,13 @@ function PlayerList() {
     const nextPlayers = [
       ...players.slice(0, insertPlayerAt),
       {
-        id: players[insertPlayerAt].id + players[players.length - 1].id,
+        id: nextPlayerId++,
         name: name,
       },
       ...players.slice(insertPlayerAt),
     ];
     setPlayers(nextPlayers);
+    console.log(nextPlayers);
     setName("");
   }
 
