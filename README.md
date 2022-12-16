@@ -12,3 +12,6 @@ In this read, I learnt:
 - you can use any of the array methods above whether the mutate the array or not by using `Immer`
 - to use the `spread syntax` to add an item to the array without mutating the old array. `You can also insert the new array item at the start `while using the spread syntax. Just insert it before you spread the other array items. This is similar to what unshift() does but without mutation. The normal spread syntax does the same job as push() but without mutation.
 - to use `filter()`. Which creates a new array without the array item that didn't pass the condition
+- that if you want to change all items of an array, use map() to create a new array with the function passed to map() modifying each array item as it wants.
+- that you should use map() also if you want to replace a particular item in an array. Here, you should pass an extra argument (to make them 2) for the item's id. Using this is you can choose whether to use the old array item or replace it with a new one
+- to insert an item into an array at a position which is neither at the beginning or at the end by using the `spread syntax and slice()` method

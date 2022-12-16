@@ -10,14 +10,17 @@ function PlayerList() {
   const [players, setPlayers] = React.useState(initialPlayers);
 
   function handleAddPlayerClick() {
-    setName("");
-    setPlayers([
-      ...players,
+    const insertPlayerAt = 2;
+    const nextPlayers = [
+      ...players.slice(0, insertPlayerAt),
       {
-        id: players[players.length - 1].id + 1,
+        id: players[insertPlayerAt].id + players[players.length - 1].id,
         name: name,
       },
-    ]);
+      ...players.slice(insertPlayerAt),
+    ];
+    setPlayers(nextPlayers);
+    setName("");
   }
 
   return (
