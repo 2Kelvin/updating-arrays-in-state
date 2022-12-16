@@ -22,7 +22,7 @@ function PlayerList() {
 
   return (
     <div className="list">
-      <h1>Inspiring Players:</h1>
+      <h1>Inspirational Players:</h1>
       <input value={name} onChange={(e) => setName(e.target.value)} />
       <button onClick={handleAddPlayerClick}>Add</button>
       <ul>

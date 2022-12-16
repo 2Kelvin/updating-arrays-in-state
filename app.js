@@ -29,7 +29,7 @@ function PlayerList() {
     React.createElement(
       "h1",
       null,
-      "Inspiring Players:"
+      "Inspirational Players:"
     ),
     React.createElement("input", { value: name, onChange: function onChange(e) {
         return setName(e.target.value);
