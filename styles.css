@@ -4,7 +4,6 @@ body {
     height: 100vh;
 }
 
-
 h1 {
     background-color: lightyellow;
 }
@@ -29,7 +28,7 @@ input {
     border-radius: 10px;
     padding: 0.8em;
     border: 1px #222 solid;
-    width: 70%;
+    width: 50%;
 }
 
 button {
@@ -38,7 +37,7 @@ button {
     border-radius: 5px;
     font-weight: bold;
     padding: 0.7em;
-    margin-left: 1em;
+    margin-left: 0.3em;
     cursor: pointer;
 }
 

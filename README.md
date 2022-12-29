@@ -15,3 +15,5 @@ In this read, I learnt:
 - that if you want to change all items of an array, use map() to create a new array with the function passed to map() modifying each array item as it wants.
 - that you should use map() also if you want to replace a particular item in an array. Here, you should pass an extra argument (to make them 2) for the item's id. Using this is you can choose whether to use the old array item or replace it with a new one
 - to insert an item into an array at a position which is neither at the beginning or at the end by using the `spread syntax and slice()` method
+- to manually copy an array if the spread operator, filter() or map() are not enough. You can then use the new copied array with mutating methods like `reverse()` and `sort()`
+- that, you CANNOT mutate the new copied array because it will mutate the existing state. This is because the original and copy array point to the same array object.

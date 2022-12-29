@@ -26,11 +26,17 @@ function PlayerList() {
     setName("");
   }
 
+  function handleReverseArrayClick() {
+    const copiedPlayers = [...players];
+    setPlayers(copiedPlayers.reverse());
+  }
+
   return (
     <div className="list">
       <h1>Inspirational Players:</h1>
       <input value={name} onChange={(e) => setName(e.target.value)} />
       <button onClick={handleAddPlayerClick}>Add</button>
+      <button onClick={handleReverseArrayClick}>Reverse List</button>
       <ul>
         {players.map((player) => (
           <li key={player.id}>
@@ -40,9 +46,7 @@ function PlayerList() {
               onClick={() => {
                 setPlayers(players.filter((p) => p.id !== player.id));
               }}
-            >
-              delete
-            </span>
+            ></span>
           </li>
         ))}
       </ul>

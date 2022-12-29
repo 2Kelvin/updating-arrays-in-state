@@ -28,6 +28,11 @@ function PlayerList() {
     setName("");
   }
 
+  function handleReverseArrayClick() {
+    var copiedPlayers = [].concat(_toConsumableArray(players));
+    setPlayers(copiedPlayers.reverse());
+  }
+
   return React.createElement(
     "div",
     { className: "list" },
@@ -43,6 +48,11 @@ function PlayerList() {
       "button",
       { onClick: handleAddPlayerClick },
       "Add"
+    ),
+    React.createElement(
+      "button",
+      { onClick: handleReverseArrayClick },
+      "Reverse List"
     ),
     React.createElement(
       "ul",
