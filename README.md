@@ -1,5 +1,7 @@
 # updating-arrays-in-state
 
+![updatingStateArrays](https://user-images.githubusercontent.com/85868026/209989954-fc5c908c-2d6f-4718-8577-cef3ae172fb9.png)
+
 In this read, I learnt:
 
 - just like objects, arrays too are `immutable too when set to state`
